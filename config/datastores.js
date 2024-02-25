@@ -21,7 +21,7 @@ module.exports.datastores = {
   * Your app's default datastore.                                            *
   *                                                                          *
   * Sails apps read and write to local disk by default, using a built-in     *
-  * database adapter called `sails-disk`.  This feature is purely for        *
+  * da This feature is purely for  tabase adapter called `sails-disk`.       *
   * convenience during development; since `sails-disk` is not designed for   *
   * use in a production environment.                                         *
   *                                                                          *
@@ -50,14 +50,8 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
-    sails_mongodb: {
-      adapter: 'sails-mongo',
-      //url: 'mongodb://root@localhost/foo'
-      url:'mongodb+srv://tester:JYz43jiRlJxc13ib@cluster1.hmwgtyu.mongodb.net/?retryWrites=true&w=majority&appName=cluster1' 
-
-    }
-    
-    
+   
+      
   },
 
 

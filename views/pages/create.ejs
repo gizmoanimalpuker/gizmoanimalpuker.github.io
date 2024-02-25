@@ -6,9 +6,57 @@
     <title>CreatePage</title>
 </head>
 <body>
-    <div class="content text-center">
-        <h1 class="header">This is the Create Page</h1>
-        <p>Everything in here should be centers</p>
+    <div class="container">
+        <!-- Row to center the form on the page -->
+    <div class="row">
+        <!-- Column to hold the form with additional styling -->
+        <div class="col-md-6 col-md-offset-3 text-center panel-with-background">
+          <!-- Panel with a default style -->
+          <div class="panel panel-default">
+            <!-- Panel heading with a title -->
+            <div class="panel-heading">
+              <h1>Create Your Event</h1>
+            </div>
+            <!-- Panel body containing the form -->
+            <div class="panel-body">
+              <!-- Form element -->
+              <form>
+                <!-- Form group for Event Name -->
+                <div class="form-group">
+                  <label for="eventName">Event Name:</label>
+                  <input type="text" class="form-control" id="eventName" placeholder="Enter event name">
+                </div>
+                <!-- Form group for Event Purpose -->
+                <div class="form-group">
+                  <label for="eventPurpose">Event Purpose:</label>
+                  <input type="text" class="form-control" id="eventPurpose" placeholder="Enter event purpose">
+                </div>
+                <!-- Form group for Date of Event -->
+                <div class="form-group">
+                  <label for="dateOfEvent">Date of Event:</label>
+                  <input type="date" class="form-control" id="dateOfEvent">
+                </div>
+                <!-- Form group for Host -->
+                <div class="form-group">
+                  <label for="host">Host:</label>
+                  <input type="text" class="form-control" id="host" placeholder="Enter host name">
+                </div>
+                <!-- Form group for Additional Message -->
+                <div class="form-group">
+                  <label for="additionalMessage">Additional Message:</label>
+                  <textarea class="form-control" id="additionalMessage" rows="3" placeholder="Enter additional message"></textarea>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary">Create</button>
+                <!-- Cancel button -->
+                <button type="button" class="btn btn-default">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
     </div>
 
     
