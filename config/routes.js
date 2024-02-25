@@ -19,14 +19,17 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/index' },
+  //Update Pages routes 
+
+  '/': { view: 'pages/index' }, 
   '/create':{view:'pages/create'},
   '/login': {view:'pages/login'},
   '/groups': { view: 'pages/groups' },
   '/events': { view: 'pages/events' },
   '/features': { view: 'pages/features' },
   '/support': { view: 'pages/support' },
-  '/contact':{view: 'pages/contact'}
+  '/contact':{view: 'pages/contact'},
+  '/browse':{view: 'pages/browse'}
 
 
   /***************************************************************************
