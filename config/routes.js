@@ -29,7 +29,14 @@ module.exports.routes = {
   '/features': { view: 'pages/features' },
   '/support': { view: 'pages/support' },
   '/contact':{view: 'pages/contact'},
-  '/browse':{view: 'pages/browse'}
+  '/browse':{view: 'pages/browse'},
+
+  // Add routes for event's CRUD method
+  
+  'POST /events': 'EventController.create',
+  'GET /events': 'EventController.find',
+  'PUT /events/:id': 'EventController.update',
+  'DELETE /events/:id': 'EventController.delete',
 
 
   /***************************************************************************

@@ -20,21 +20,21 @@
             <!-- Panel body containing the form -->
             <div class="panel-body">
               <!-- Form element -->
-              <form>
+              <form action="/events" method="post">
                 <!-- Form group for Event Name -->
                 <div class="form-group">
-                  <label for="eventName">Event Name:</label>
-                  <input type="text" class="form-control" id="eventName" placeholder="Enter event name">
+                  <label for="name">Event Name:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter event name" required>
                 </div>
-                <!-- Form group for Event Purpose -->
+                <!-- Form group for Event Location -->
                 <div class="form-group">
-                  <label for="eventPurpose">Event Purpose:</label>
-                  <input type="text" class="form-control" id="eventPurpose" placeholder="Enter event purpose">
+                  <label for="location">Event Location:</label>
+                  <input type="text" class="form-control" id="location" placeholder="Enter event location" required>
                 </div>
                 <!-- Form group for Date of Event -->
                 <div class="form-group">
-                  <label for="dateOfEvent">Date of Event:</label>
-                  <input type="date" class="form-control" id="dateOfEvent">
+                  <label for="date">Date of Event:</label>
+                  <input type="datetime-local" class="form-control" id="date" required>
                 </div>
                 <!-- Form group for Host -->
                 <div class="form-group">

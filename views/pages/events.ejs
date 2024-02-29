@@ -4,3 +4,17 @@
 
     This page will interact data from the database and display data in a UL
  -->
+ <body>
+    <h1>Events</h1>
+    <% if (events.length > 0) { %>
+      <ul>
+        <% events.forEach(event => { %>
+          <li>
+            <strong><%= event.name %></strong> - <%= event.location %> - <%= new Date(event.date).toLocaleString() %>
+          </li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No events found.</p>
+    <% } %>
+  </body>
