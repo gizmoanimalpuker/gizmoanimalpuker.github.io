@@ -7,7 +7,7 @@ module.exports={
 
         location:{
             type:'string',
-            required:TextTrackCue
+            required: true
         },
 
         date:{
