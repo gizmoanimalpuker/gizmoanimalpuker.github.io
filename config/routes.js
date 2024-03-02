@@ -25,7 +25,7 @@ module.exports.routes = {
   '/create':{view:'pages/create'},
   '/login': {view:'pages/login'},
   '/groups': { view: 'pages/groups' },
-  '/events': { view: 'pages/events' },
+  //'/listevents': { view: 'pages/listevents' }, //need to update the links
   '/features': { view: 'pages/features' },
   '/support': { view: 'pages/support' },
   '/contact':{view: 'pages/contact'},
@@ -34,9 +34,10 @@ module.exports.routes = {
   // Add routes for event's CRUD method
   
   'POST /events': 'EventController.create',
-  'GET /events': 'EventController.find',
+  'GET /listevents': 'EventController.find',
   'PUT /events/:id': 'EventController.update',
   'DELETE /events/:id': 'EventController.delete',
+  //'GET /events' : 'ViewController.displayEvents'
 
 
   /***************************************************************************

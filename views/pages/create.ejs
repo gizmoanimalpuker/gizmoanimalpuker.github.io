@@ -19,32 +19,34 @@
             </div>
             <!-- Panel body containing the form -->
             <div class="panel-body">
+
+
               <!-- Form element -->
               <form action="/events" method="post">
                 <!-- Form group for Event Name -->
                 <div class="form-group">
                   <label for="name">Event Name:</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter event name" required>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter event name" required>
                 </div>
                 <!-- Form group for Event Location -->
                 <div class="form-group">
                   <label for="location">Event Location:</label>
-                  <input type="text" class="form-control" id="location" placeholder="Enter event location" required>
+                  <input type="text" class="form-control" id="location" name="location" placeholder="Enter event location" required>
                 </div>
                 <!-- Form group for Date of Event -->
                 <div class="form-group">
                   <label for="date">Date of Event:</label>
-                  <input type="datetime-local" class="form-control" id="date" required>
+                  <input type="datetime-local" class="form-control" id="date" name="date" required>
                 </div>
                 <!-- Form group for Host -->
                 <div class="form-group">
                   <label for="host">Host:</label>
-                  <input type="text" class="form-control" id="host" placeholder="Enter host name">
+                  <input type="text" class="form-control" id="host" name="host" placeholder="Enter host name">
                 </div>
                 <!-- Form group for Additional Message -->
                 <div class="form-group">
                   <label for="additionalMessage">Additional Message:</label>
-                  <textarea class="form-control" id="additionalMessage" rows="3" placeholder="Enter additional message"></textarea>
+                  <textarea class="form-control" id="additionalMessage" rows="3" name="additionalMessage" placeholder="Enter additional message"></textarea>
                 </div>
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary">Create</button>

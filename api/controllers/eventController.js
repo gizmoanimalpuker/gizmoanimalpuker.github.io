@@ -1,11 +1,11 @@
-// api/controllers/EventController.js
+//api/controllers/eventController.js
 module.exports = {
     // Create action
     create: async function(req, res) {
       try {
         const { name, location, date } = req.body;
         const event = await Event.create({ name, location, date }).fetch();
-        return res.json(event);
+        return res.view('pages/listevents',event );
       } catch (err) {
         return res.serverError(err);
       }
@@ -14,8 +14,9 @@ module.exports = {
     // Read action
     find: async function(req, res) {
       try {
-        const events = await Event.find();
-        return res.json(events);
+        const event = await Event.find();
+        //return res.json(events);
+        return res.view('listevents',{event})
       } catch (err) {
         return res.serverError(err);
       }

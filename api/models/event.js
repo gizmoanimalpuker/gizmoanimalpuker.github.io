@@ -1,5 +1,5 @@
 module.exports={
-    attibute:{
+    attribute:{
         name:{
             type:'string',
             require: true
