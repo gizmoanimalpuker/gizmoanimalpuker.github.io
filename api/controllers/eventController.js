@@ -1,11 +1,14 @@
+// const CalendarEvent = require("../models/CalendarEvent");
+
 //api/controllers/eventController.js
 module.exports = {
     // Create action
     create: async function(req, res) {
       try {
-        const { name, location, date } = req.body;
-        const event = await Event.create({ name, location, date }).fetch();
-        return res.view('pages/listevents',event );
+        const { name, location, date , host , additionalMessage } = req.body;
+        let events = await CalendarEvent.create({ name, location, date, host, additionalMessage }).fetch();
+        events = [events];
+        return res.view('pages/listevents',{events} );
       } catch (err) {
         return res.serverError(err);
       }
@@ -14,9 +17,9 @@ module.exports = {
     // Read action
     find: async function(req, res) {
       try {
-        const event = await Event.find();
+        const events = await CalendarEvent.find();
         //return res.json(events);
-        return res.view('listevents',{event})
+        return res.view('pages/listevents',{events})
       } catch (err) {
         return res.serverError(err);
       }
@@ -27,7 +30,7 @@ module.exports = {
       try {
         const { id } = req.params;
         const { name, location, date } = req.body;
-        const updatedEvent = await Event.updateOne({ id }).set({ name, location, date });
+        const updatedEvent = await CalendarEvent.updateOne({ id }).set({ name, location, date });
         if (!updatedEvent) {
           return res.notFound('Event not found');
         }
@@ -41,7 +44,7 @@ module.exports = {
     delete: async function(req, res) {
       try {
         const { id } = req.params;
-        const deletedEvent = await Event.destroyOne({ id });
+        const deletedEvent = await CalendarEvent.destroyOne({ id });
         if (!deletedEvent) {
           return res.notFound('Event not found');
         }

@@ -8,19 +8,36 @@
     <!-- Add any CSS or other meta tags here -->
 </head>
 <body>
-    <h1>Events</h1>
-    <% event.forEach(event => { %>
-        <li>
-            <h2><%= event.name %></h2>
-            <p><strong>Location:</strong> <%= event.location %></p>
-            <p><strong>Date:</strong> <%= new Date(event.date).toLocaleString() %></p>
-            <% if (event.host) { %>
-                <p><strong>Host:</strong> <%= event.host %></p>
-            <% } %>
-            <% if (event.additionalMessage) { %>
-                <p><strong>Additional Message:</strong> <%= event.additionalMessage %></p>
-            <% } %>
-        </li>
-    <% }); %>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Bootstrap card -->
+                <div class="card bg-light" >
+                    <div class="card-body">
+                        <h1 class="text-center">List of Events</h1>
+                        <ul>
+                            <% events.forEach(event => { %>
+                                <li class="list-group-item" style="background-color: #f8f9fa;">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h2 class="card-title"><%= event.name %></h2>
+                                            <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
+                                            <p class="card-text"><strong>Date:</strong> <%= new Date(event.date).toLocaleString() %></p>
+                                            <% if (event.host) { %>
+                                                <p class="card-text"><strong>Host:</strong> <%= event.host %></p>
+                                            <% } %>
+                                            <% if (event.additionalMessage) { %>
+                                                <p class="card-text"><strong>Additional Message:</strong> <%= event.additionalMessage %></p>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

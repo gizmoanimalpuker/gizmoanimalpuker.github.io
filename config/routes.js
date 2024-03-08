@@ -21,15 +21,11 @@ module.exports.routes = {
 
   //Update Pages routes 
 
-  '/': { view: 'pages/index' }, 
-  '/create':{view:'pages/create'},
-  '/login': {view:'pages/login'},
-  '/groups': { view: 'pages/groups' },
-  //'/listevents': { view: 'pages/listevents' }, //need to update the links
-  '/features': { view: 'pages/features' },
-  '/support': { view: 'pages/support' },
-  '/contact':{view: 'pages/contact'},
-  '/browse':{view: 'pages/browse'},
+  '/': { view: 'pages/index' },  //route to index page
+  '/create':{view:'pages/create'}, //route to create page
+  '/listevents': { view: 'pages/listevents' }, // route to list event pages
+ 
+
 
   // Add routes for event's CRUD method
   
@@ -37,7 +33,7 @@ module.exports.routes = {
   'GET /listevents': 'EventController.find',
   'PUT /events/:id': 'EventController.update',
   'DELETE /events/:id': 'EventController.delete',
-  //'GET /events' : 'ViewController.displayEvents'
+  
 
 
   /***************************************************************************
