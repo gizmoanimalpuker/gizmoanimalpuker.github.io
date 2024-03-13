@@ -1,6 +1,4 @@
-// const CalendarEvent = require("../models/CalendarEvent");
 
-//api/controllers/eventController.js
 module.exports = {
     // Create action
     create: async function(req, res) {

@@ -30,6 +30,8 @@
                                                 <p class="card-text"><strong>Additional Message:</strong> <%= event.additionalMessage %></p>
                                             <% } %>
                                         </div>
+                                        <button type="button" class="btn btn-danger" onclick="deleteEvent('<%= event.id %>')">Delete</button>
+                                        <button type="button" class="btn btn-info" onclick="">Update</button>
                                     </div>
                                 </li>
                             <% }); %>
