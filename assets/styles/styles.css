@@ -1,0 +1,93 @@
+#loginform{
+    padding: 20px;
+    display: flex ;
+    margin: auto;
+}
+
+#page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 46px;
+      
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content{
+      margin-bottom: 200px;
+  }
+  #acme {
+      margin-left: 400px;
+  }
+  #author {
+      float: right;
+      margin-left: 300px;
+      font-weight: bold;
+  }
+  .contact{
+      width: 150px;
+      height: 50px;
+      background-color: aliceblue;
+      margin: 25px;
+  }
+
+  #create {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+  
+  #create:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+  }
+  
+  #create:active {
+    background-color: rgb(255, 56, 86);
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+  }
+  ul {
+    list-style-position: inside;
+    text-indent: -10px;
+}
+
+
+ul li {
+    margin-left: 20px; 
+}
+#acceptDiv {
+  background-color: pink;
+  width: 50%;
+margin-left: 25%;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+body {
+  background-color: #414141;
+
+}
+footer {
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+.card {
+ background-color: white;
+}
+#card-body {
+background-color: gray;
+}
+

@@ -1,0 +1,46 @@
+<!-- views/pages/userEvents.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Events</title>
+    <!-- Add any CSS or other meta tags here -->
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-md-8">
+                <!-- Bootstrap card -->
+                <div class="card bg-light" >
+                    <div class="card-body">
+                        <h1 class="text-center">List of Events</h1>
+                        <ul>
+                            <% events.forEach(event => { %>
+                                <li class="list-group-item" style="background-color: #f8f9fa;">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h2 class="card-title"><%= event.name %></h2>
+                                            <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
+                                            <p class="card-text"><strong>Date:</strong> <%= new Date(event.date).toLocaleString() %></p>
+                                            <% if (event.host) { %>
+                                                <p class="card-text"><strong>Host:</strong> <%= event.host %></p>
+                                            <% } %>
+                                            <% if (event.additionalMessage) { %>
+                                                <p class="card-text"><strong>Additional Message:</strong> <%= event.additionalMessage %></p>
+                                            <% } %>
+                                        </div>
+                                        <button type="button" class="btn btn-danger" onclick="deleteEvent('<%= event.id %>')">Delete</button>
+                                       
+                                        <a href="/create"><button type="button" class="btn btn-info" onclick="getId('<%= event.id %>')">Update</button></a>
+                                    </div>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
