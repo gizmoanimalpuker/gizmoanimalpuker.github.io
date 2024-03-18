@@ -16,6 +16,7 @@
                     <div class="card-body">
                         <h1 class="text-center">List of Events</h1>
                         <ul>
+                            
                             <% events.forEach(event => { %>
                                 <li class="list-group-item" style="background-color: #f8f9fa;">
                                     <div class="card">
@@ -30,8 +31,14 @@
                                                 <p class="card-text"><strong>Additional Message:</strong> <%= event.additionalMessage %></p>
                                             <% } %>
                                         </div>
-                                        <button type="button" class="btn btn-danger" onclick="deleteEvent('<%= event.id %>')">Delete</button>
-                                        <button type="button" class="btn btn-info" onclick="">Update</button>
+
+                                        <div>
+                                            <!-- Delete Button -->
+                                            <button type="button" class="coolbutton" onclick="deleteEvent('<%= event.id %>')">Delete</button>
+                                            <!-- Update Button -->
+                                            <a href="/create"><button  type="button" class="coolbutton_blue" onclick="getId('<%= event.id %>')">Update</button></a>
+                                        </div>
+                                        
                                     </div>
                                 </li>
                             <% }); %>

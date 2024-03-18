@@ -27,8 +27,8 @@ module.exports = {
     update: async function(req, res) {
       try {
         const { id } = req.params;
-        const { name, location, date } = req.body;
-        const updatedEvent = await CalendarEvent.updateOne({ id }).set({ name, location, date });
+        const { name, location, date, host,additionalMessage } = req.body;
+        const updatedEvent = await CalendarEvent.updateOne({ id }).set({ name, location, date,host,additionalMessage });
         if (!updatedEvent) {
           return res.notFound('Event not found');
         }
