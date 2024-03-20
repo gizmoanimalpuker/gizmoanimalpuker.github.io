@@ -23,7 +23,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/index' },  //route to index page
   '/create':{view:'pages/create'}, //route to create page
-  '/listevents': { view: 'pages/listevents' }, // route to list event pages
+ 
  
 
 
